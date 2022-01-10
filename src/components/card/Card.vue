@@ -5,7 +5,7 @@
       <h3>{{title}}</h3>
       <h2>{{tips}}</h2>
       <slot name="img">
-      <img src="../../assets/img/card/card1.png" />
+      <img src="../../assets/img/card/card1.png" alt=""/>
       </slot>
     </div>
   </div>
