@@ -50,7 +50,9 @@ body {
   background-color: #110d53;
   background-color: #0b1061;
   /* background-color: linear-gradient(#031032,#181a78,90deg); */
-  /* background-color: rgba(2, 4, 107, 0.911); */
+
+  background-color: rgba(2, 4, 107, 0.911);
+
 }
 a {
   display: inline-block;

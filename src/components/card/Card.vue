@@ -33,7 +33,7 @@ export default {
     tips:{
       type:String,
       require:true,
-      default:"快速"
+      default:"快速准确的分析结果"
     }
   }
 };

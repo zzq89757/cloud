@@ -17,5 +17,12 @@ const childrouter = [{
     title: 'banner'
   },
   component: Banner
+}, {
+  path: '/product',
+  name: 'product',
+  meta: {
+    title: 'product'
+  },
+  component: Product
 }]
 export default childrouter;

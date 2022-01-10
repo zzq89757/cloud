@@ -11,11 +11,13 @@
 <script>
 import NavBar from "@/components/navbar/NavBar";
 import Banner from "@/components/banner/Banner";
+
 export default {
   data() {
     return {};
   },
   components: { NavBar,Banner },
+
   computed: {},
 
   mounted: {},

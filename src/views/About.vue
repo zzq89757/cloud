@@ -1,30 +1,27 @@
 <!--  -->
 <template>
   <div>
-      <NavBar></NavBar>
-      <div id = "content" style="height:100px">
+    <NavBar></NavBar>
 
-      </div>
+    <div id="content"></div>
   </div>
 </template>
 
 <script>
-import NavBar from '@/components/navbar/NavBar';
+import NavBar from "@/components/navbar/NavBar";
 export default {
-  data () {
-    return {
-    };
+  data() {
+    return {};
   },
 
-  components: {NavBar},
+  components: { NavBar },
 
-//   computed: {},
+  //   computed: {},
 
-//   mounted: {},
+  //   mounted: {},
 
-//   methods: {}
-}
-
+  //   methods: {}
+};
 </script>
 <style scoped>
 </style>

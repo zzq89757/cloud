@@ -17,11 +17,10 @@ import Count from "@/components/count/Count";
 export default {
   name: "home",
   data() {
-    return {     
-    };
+    return {};
   },
-  components: { NavBar, Footer, Banner, CardTable,Count },
-  methods: {}
+  components: { NavBar, Footer, Banner, CardTable, Count },
+  methods: {},
 };
 </script>
 <style scoped>
