@@ -1,18 +1,17 @@
 <!--  -->
 <template>
-  <div>
-    <Card class="pro"></Card>
+  <div class="pro">
+  
   </div>
 </template>
 
 <script>
-import Card from "@/components/card/Card";
 export default {
   data() {
     return {};
   },
 
-  components: { Card },
+  components: {  },
 
   computed: {},
 
@@ -23,6 +22,12 @@ export default {
 </script>
 <style lang='css' scoped>
 .pro {
-  /* width: 370px; */
+  width: 290px;
+  height: 400px;
+  background-color: bisque;
+  margin: 100px auto;
+  /* display: inline-block; */
+  /* text-align: center; */
+
 }
 </style>
