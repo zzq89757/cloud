@@ -23,6 +23,6 @@ export default {
 </script>
 <style lang='css' scoped>
 .pro {
-  width: 380px;
+  /* width: 370px; */
 }
 </style>
