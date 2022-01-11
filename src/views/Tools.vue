@@ -16,7 +16,7 @@ export default {
   data() {
     return {};
   },
-  components: { NavBar,Banner },
+  components: { NavBar, Banner },
 
   computed: {},
 
