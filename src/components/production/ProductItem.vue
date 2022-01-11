@@ -1,4 +1,4 @@
-<!--  -->
+<!-- s -->
 <template>
   <div>
     <div  class="product_box">
