@@ -10,10 +10,10 @@
       </div>
       <div class="">
         <nav-bar-item
-          :en="en[index]"
-          :ch="title[index]"
-          v-for="(item, index) in title"
-          :key="item.id"
+          :en="item.path"
+          :ch="item.title"
+          v-for="item in navobj"
+          :key="item.title"
         ></nav-bar-item>
       </div>
     </nav>
@@ -27,8 +27,32 @@ export default {
   name: "NavBar",
   data() {
     return {
-      title: ["首页", "流程", "工具", "关于", "登录", "注册"],
-      en: ["", "index_flow", "index_server", "about", "login", "signup"],
+      navobj: [
+        {
+          title: "首页",
+          path: "",
+        },
+        {
+          title: "流程",
+          path: "index_flow",
+        },
+        {
+          title: "工具",
+          path: "index_server",
+        },
+        {
+          title: "关于",
+          path: "about",
+        },
+        {
+          title: "登录",
+          path: "login",
+        },
+        {
+          title: "注册",
+          path: "signup",
+        },
+      ],
     };
   },
 };
