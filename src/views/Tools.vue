@@ -1,4 +1,3 @@
-<!--  -->
 <template>
   <div id="root">
     <NavBar></NavBar>
