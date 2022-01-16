@@ -16,7 +16,7 @@
     </div>
     <div>
       <slot name="img">
-        <img src="@/assets/img/newbg.png" />
+        <img src="@/assets/img/newbg.png" alt=""/>
       </slot>
     </div>
   </div>
