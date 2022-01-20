@@ -7,15 +7,20 @@
 </template>
 
 <script>
-import jsondata from "@/assets/json/toolMsg.json";
+// import jsondata from "@/assets/json/toolMsg.json";
 import ProductItem from './ProductItem.vue';
 export default {
   data() {
     return {
-      jsondata,
+      // jsondata,
     };
   },
-
+  props:{
+    jsondata:{
+      type:Array,
+      required:true,
+    }
+  },
   components: {ProductItem},
 
   computed: {},
@@ -32,6 +37,7 @@ export default {
   justify-content: space-evenly;
   width: 1400px;
   margin: 0 auto;
+  background-image: "@/assets/img/onething.jpg";
 }
 
 </style>

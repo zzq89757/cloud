@@ -1,41 +1,41 @@
 [{
-    "href": "http://192.168.21.15:9080/application-flow",
-    "src": "http://192.168.21.15:9080/images/ass_rna_seq_bg.png",
+    "href": "http://cloud.vazyme.com:83//application-flow",
+    "src": "http://cloud.vazyme.com:83//images/ass_rna_seq_bg.png",
     "title": "RNA-Seq",
     "content": "转录组重测序分析"
 }, {
-    "href": "http://192.168.21.15:9080/application-flow",
-    "src": "http://192.168.21.15:9080/images/ass_wgs_bg.png",
+    "href": "http://cloud.vazyme.com:83//application-flow",
+    "src": "http://cloud.vazyme.com:83//images/ass_wgs_bg.png",
     "title": "WGS",
     "content": "全基因组重测序分析"
 }, {
-    "href": "http://192.168.21.15:9080/application-flow",
-    "src": "http://192.168.21.15:9080/images/ass_miRNA_bg.png",
+    "href": "http://cloud.vazyme.com:83//application-flow",
+    "src": "http://cloud.vazyme.com:83//images/ass_miRNA_bg.png",
     "title": "smallRNA-Seq",
     "content": "small RNA 测序分析"
 }, {
-    "href": "http://192.168.21.15:9080/application-flow",
-    "src": "http://192.168.21.15:9080/images/ass_lncrna_bg.png",
+    "href": "http://cloud.vazyme.com:83//application-flow",
+    "src": "http://cloud.vazyme.com:83//images/ass_lncrna_bg.png",
     "title": "lncRNA-Seq",
     "content": "lncRNA分析"
 }, {
-    "href": "http://192.168.21.15:9080/application-flow",
-    "src": "http://192.168.21.15:9080/images/ass_atac_bg.png",
+    "href": "http://cloud.vazyme.com:83//application-flow",
+    "src": "http://cloud.vazyme.com:83//images/ass_atac_bg.png",
     "title": "ATAC-Seq",
     "content": "ATAC分析"
 }, {
-    "href": "http://192.168.21.15:9080/application-flow",
-    "src": "http://192.168.21.15:9080/images/ass_circleRna.jpg",
+    "href": "http://cloud.vazyme.com:83//application-flow",
+    "src": "http://cloud.vazyme.com:83//images/ass_circleRna.jpg",
     "title": "circRNA-Seq",
     "content": "circRNA分析"
 }, {
-    "href": "http://192.168.21.15:9080/application-flow",
-    "src": "http://192.168.21.15:9080/images/ass_wgs_bg.png",
+    "href": "http://cloud.vazyme.com:83//application-flow",
+    "src": "http://cloud.vazyme.com:83//images/ass_wgs_bg.png",
     "title": "Exon-seq",
     "content": "外显子测序分析"
 }, {
-    "href": "http://192.168.21.15:9080/application-flow",
-    "src": "http://192.168.21.15:9080/images/ass_chip_seq_bc.png",
+    "href": "http://cloud.vazyme.com:83//application-flow",
+    "src": "http://cloud.vazyme.com:83//images/ass_chip_seq_bc.png",
     "title": "Chip-Seq",
     "content": "Chip-Seq分析"
 }]
