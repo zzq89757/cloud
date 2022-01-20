@@ -2,15 +2,9 @@
 <template>
   <div>
     <div  class="product_box">
-      <slot name="picture">
-        <img />
-      </slot>
-      <slot name="title">
-        <h5>标题</h5>
-      </slot>
-      <slot name="content">
-        <p>内容</p>
-      </slot>
+        <img :src="goods.src" alt=""/>
+        <h5>{{goods.title}}</h5>
+        <p>{{goods.content}}</p>
     </div>
   </div>
 </template>
@@ -20,7 +14,17 @@ export default {
   data() {
     return {};
   },
-
+  props:{
+    goods:{
+      type:Array,
+      required:true,
+      default:[{
+        src:"http://localhost/img/logo_white_nopadding.7908cbcf.png",
+        title:"vazyme",
+        content:"just do it"
+      }]
+    }
+  },
   components: {},
 
   computed: {},

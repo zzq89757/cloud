@@ -1,10 +1,7 @@
 <!--  -->
 <template>
   <div class="pro">
-    <product-item v-for="item in jsondata" :key="item.title">
-      <img slot="picture" :src="item.src">
-      <h5 slot="title">{{ item.title }}</h5>
-      <p slot="content">{{ item.content }}</p>
+    <product-item v-for="item in jsondata" :key="item.title" :goods="item">
     </product-item>
   </div>
 </template>
