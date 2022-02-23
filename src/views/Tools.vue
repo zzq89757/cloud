@@ -5,17 +5,20 @@
       <h2 slot="title">海量数据分析工具</h2>
       <p slot="tips">开启个性化分析新体验</p>
     </Banner>
-    <product></product>
+    <product :jsondata="toolMsg"></product>
   </div>
 </template>
 <script>
+import toolMsg from "@/assets/json/toolMsg.json";
 import NavBar from "@/components/navbar/NavBar";
 import Banner from "@/components/banner/Banner";
 import Product from '@/components/production/Product';
 
 export default {
   data() {
-    return {};
+    return {
+      toolMsg
+    };
   },
   components: { NavBar, Banner,Product },
 
