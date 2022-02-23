@@ -4,14 +4,14 @@
     <div class="main_content">
       <div class="word">
         <slot name="title">
-          <h2>诺唯赞生物信息云平台</h2>
+          <h2>{{message.title}}</h2>
         </slot>
         <slot name="tips">
-          <p>一站式数据分析解决方案</p>
+          <p>{{message.tips}}</p>
         </slot>
       </div>
       <slot name="button">
-        <button>立即使用</button>
+        <button>{{message.buttonValue}}</button>
       </slot>
     </div>
     <div>
@@ -26,6 +26,16 @@
 export default {
   data() {
     return {};
+  },props:{
+    message:{
+      type:Object,
+      required:false,
+      default:{
+        title:"诺唯赞生物信息云平台",
+        tips:"一站式数据分析解决方案",
+        buttonValue:"立即使用"
+      }
+    }
   },
 
   components: {},
