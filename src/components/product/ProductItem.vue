@@ -1,16 +1,9 @@
 <!-- s -->
 <template>
-  <div>
-    <!-- <div class="product_box">
-      <slot name="picture"><img /></slot>
-      <slot name="title"> <h4>"嘿嘿"</h4></slot>
-      <slot name="content"><p>哈哈</p></slot>
-    </div> -->
-    <div class="product_box">
-      <img :src="product.src" />
-      <h4>{{ product.title }}</h4>
-      <p>{{ product.content }}</p>
-    </div>
+  <div class="product_box" @click="jump(product.href)">
+    <img :src="product.src" />
+    <h4>{{ product.title }}</h4>
+    <p>{{ product.content }}</p>
   </div>
 </template>
 
@@ -38,7 +31,11 @@ export default {
 
   mounted: {},
 
-  methods: {},
+  methods: {
+    jump(href) {
+      window.open(href);
+    },
+  },
 };
 </script>
 <style lang='css' scoped>
@@ -52,6 +49,7 @@ export default {
   margin: 24px;
   border-radius: 4px;
   overflow: hidden;
+  cursor: pointer;
 }
 .product_box h4 {
   font-size: 18px;

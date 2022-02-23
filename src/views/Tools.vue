@@ -11,7 +11,7 @@
 <script>
 import NavBar from "@/components/navbar/NavBar";
 import Banner from "@/components/banner/Banner";
-import Product from "@/components/production/Product";
+import Product from "@/components/product/Product";
 import {request} from "@/network/axios"
 
 export default {

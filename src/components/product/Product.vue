@@ -12,8 +12,7 @@ import ProductItem from "./ProductItem.vue";
 
 export default {
   data() {
-    return {
-    };
+    return {};
   },
   props: {
     productList: {
@@ -22,9 +21,7 @@ export default {
       default: [],
     },
   },
-  created() {
-
-  },
+  created() {},
   components: { ProductItem },
 
   computed: {},
