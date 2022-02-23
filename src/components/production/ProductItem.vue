@@ -1,10 +1,15 @@
 <!-- s -->
 <template>
   <div>
-    <div  class="product_box">
-        <img :src="goods.src" alt=""/>
-        <h4>{{goods.title}}</h4>
-        <p>{{goods.content}}</p>
+    <!-- <div class="product_box">
+      <slot name="picture"><img /></slot>
+      <slot name="title"> <h4>"嘿嘿"</h4></slot>
+      <slot name="content"><p>哈哈</p></slot>
+    </div> -->
+    <div class="product_box">
+      <img :src="product.src" />
+      <h4>{{ product.title }}</h4>
+      <p>{{ product.content }}</p>
     </div>
   </div>
 </template>
@@ -14,16 +19,18 @@ export default {
   data() {
     return {};
   },
-  props:{
-    goods:{
-      type:Object,
-      required:true,
-      default:[{
-        src:"http://localhost/img/logo_white_nopadding.7908cbcf.png",
-        title:"vazyme",
-        content:"just do it"
-      }]
-    }
+  props: {
+    product: {
+      type: Object,
+      required: true,
+      default: [
+        {
+          src: "http://localhost/img/logo_white_nopadding.7908cbcf.png",
+          title: "vazyme",
+          content: "just do it",
+        },
+      ],
+    },
   },
   components: {},
 
@@ -42,15 +49,15 @@ export default {
   position: relative;
   color: black;
   display: inline-block;
-  margin:24px;
+  margin: 24px;
   border-radius: 4px;
   overflow: hidden;
 }
-.product_box h4{
+.product_box h4 {
   font-size: 18px;
   font-weight: 200;
 }
-.product_box p{
+.product_box p {
   font-size: 14px;
   margin: 20px;
 }
@@ -59,7 +66,7 @@ img {
   border-radius: 4px;
   position: relative;
 }
-.product_box::after{
+.product_box::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -68,9 +75,9 @@ img {
   left: 0;
   background-color: rgba(107, 107, 107, 0.37);
   transform: scaleX(1);
-  transition: .2s linear all;
+  transition: 0.2s linear all;
 }
-.product_box:hover::after{
+.product_box:hover::after {
   background-color: #6b6b6b00;
   transform: scaleX(1);
 }

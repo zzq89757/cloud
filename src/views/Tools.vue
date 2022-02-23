@@ -5,22 +5,30 @@
       <h2 slot="title">海量数据分析工具</h2>
       <p slot="tips">开启个性化分析新体验</p>
     </Banner>
-    <product :jsondata="toolMsg"></product>
+    <Product :productList="data"></Product>
   </div>
 </template>
 <script>
-import toolMsg from "@/assets/json/toolMsg.json";
 import NavBar from "@/components/navbar/NavBar";
 import Banner from "@/components/banner/Banner";
-import Product from '@/components/production/Product';
+import Product from "@/components/production/Product";
+import {request} from "@/network/axios"
 
 export default {
   data() {
     return {
-      toolMsg
+      data: "",
     };
   },
-  components: { NavBar, Banner,Product },
+  created() {
+    request("/api/tools")
+      .then((res) => {
+        this.data = res.data;
+        console.log(res);
+      })
+      .catch((err) => console.log(err));
+  },
+  components: { NavBar, Banner, Product },
 
   computed: {},
 
