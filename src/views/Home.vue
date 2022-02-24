@@ -1,8 +1,8 @@
 <template>
   <div class="home">
     <NavBar></NavBar>
-    <Banner></Banner>
-    <CardTable></CardTable>
+    <Banner ></Banner>
+    <CardTable class="shadow"></CardTable>
     <Count></Count>
     <Footer></Footer>
   </div>
@@ -29,7 +29,7 @@ export default {
   min-width: 1250px;
   height: 100%;
   background-color: radial-gradient(circle, #FFF200, #B4FF00,#FFFFFF);
-  background-image: -webkit-linear-gradient(#000000,#181a78,245deg);
+  background-image: -webkit-linear-gradient(245deg,#000000,#181a78,);
 }
 h2 {
   font-weight: 200;
@@ -38,5 +38,8 @@ h3 {
   font-size: 40px;
   font-weight: 300;
   margin: 20px;
+}
+.shadow{
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
 }
 </style>

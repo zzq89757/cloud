@@ -72,7 +72,9 @@ a {
   min-width: 800px;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
   background: rgba(0, 0, 0, 0.1);
-  background-image: linear-gradient(#031032, #181a78, 90deg);
+  background-color: #070722;
+  background: -webkit-linear-gradient(113deg,#000,#070722, #090a3a);
+  /* background: -webkit-radial-gradient(top right, ellipse, rgb(1, 1, 14), #070722, #0c0f60); */
 }
 .topbar {
   width: 100%;

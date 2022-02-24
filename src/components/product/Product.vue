@@ -3,7 +3,6 @@
   <div class="pro">
     <product-item v-for="item in productList" :key="item.title" :product="item">
     </product-item>
-    <h2>{{ data }}</h2>
   </div>
 </template>
 
