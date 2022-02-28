@@ -28,8 +28,8 @@ export default {
   width: 100%;
   min-width: 1250px;
   height: 100%;
-  background-color: radial-gradient(circle, #FFF200, #B4FF00,#FFFFFF);
-  background-image: -webkit-linear-gradient(245deg,#000000,#181a78,);
+  /* background-color: radial-gradient(circle, #FFF200, #B4FF00,#FFFFFF);
+  background-image: -webkit-linear-gradient(245deg,#000000,#181a78,); */
 }
 h2 {
   font-weight: 200;

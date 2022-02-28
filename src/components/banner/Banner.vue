@@ -56,7 +56,7 @@ export default {
   padding-top: 100px;
   padding-bottom: 50px;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
-  background: -webkit-radial-gradient(top right, ellipse, rgb(1, 1, 14), #070722, #0c0f60);
+  /* background: -webkit-radial-gradient(top right, ellipse, rgb(1, 1, 14), #070722, #0c0f60); */
 }
 .content1 img {
   width: 612px;
