@@ -27,13 +27,14 @@ export default {
 <style lang='css' scoped>
 .box {
   width: 340px;
-  height: 220px;
+  height: 233px;
+  box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  border: 1px solid #ffffff18;
+  border: 1px solid #ffffff02;
 }
 .box p {
   display: inline-block;
