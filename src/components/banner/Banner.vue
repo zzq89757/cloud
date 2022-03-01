@@ -1,11 +1,13 @@
 <!--  -->
 <template>
-  <div style="width:100%">
+  <div >
+    <img class="banner1" src="@/assets/img/banner/banner.png" />
+    <img class="banner2" src="@/assets/img/banner/banner-1.png" />
     <div class="content-item content1">
       <div class="main_content">
         <div class="word mini">
           <slot name="title">
-            <p >{{ message.addition }}</p>
+            <p>{{ message.addition }}</p>
           </slot>
         </div>
         <div class="word">
@@ -43,7 +45,7 @@ export default {
       default: {
         title: "诺唯赞生物信息云平台",
         tips: "一站式数据分析解决方案",
-        addition:"一个平台，所有的托管",
+        addition: "一个平台，所有的托管",
         buttonValue: "立即使用"
       }
     }
@@ -62,20 +64,20 @@ export default {
 .content1 {
   margin: auto;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   width: 1200px;
   height: 100%;
   padding-top: 73px;
   padding-bottom: 73px;
 }
 .content1 img {
-  width: 600px;
-  height: 460px;
+  width: 480px;
+  height: 473px;
 }
 .main_content {
   display: flex;
   width: 50%;
-  margin: 20px 0px;
+  margin: 62px 0px;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: flex-start;
@@ -103,11 +105,23 @@ export default {
   transform: all 1s ease;
 }
 button:hover {
-  background-image: linear-gradient(90deg,#007ccd 4%,#08cbff 100%);
+  background-image: linear-gradient(90deg, #007ccd 4%, #08cbff 100%);
   cursor: pointer;
 }
-.content1 .main_content .mini p{
+.content1 .main_content .mini p {
   font-size: 20px;
   font-weight: 200;
+}
+.banner1 {
+  position: absolute;
+  top: -4%;
+  left: 0;
+  width: 67%;
+  z-index:-100;
+}
+.banner2 {
+  position: absolute;
+  right: 0;
+  bottom: -67px;
 }
 </style>

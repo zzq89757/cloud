@@ -2,17 +2,17 @@
 <template>
   <div class="cardtab">
     <div class="kouhao">
-      <h2>我们的优势</h2>
+      <p>——  &nbsp &nbsp我们的优势  &nbsp&nbsp——</p>
+      <h2>为什么选择我们</h2>
     </div>
     <div class="main_card">
       <Card
         :title="item.title"
         :tips="item.tips"
+        :imgSrc="item.url"
         v-for="item in Img"
         :key="item.name"
-      >
-        <img slot="img" :src="item.url" alt="" />
-      </Card>
+      ></Card>
     </div>
   </div>
 </template>
@@ -27,25 +27,25 @@ export default {
           name: "card1",
           title: "简单",
           tips: "零代码实现生信分析",
-          url: require(`../../assets/img/card/card1.png`),
+          url: require(`../../assets/img/card/time.png`),
         },
         {
           name: "card2",
           title: "专业",
           tips: "数目众多的生信分析工具",
-          url: require(`../../assets/img/card/card2.png`),
+          url: require(`../../assets/img/card/safe.png`),
         },
         {
           name: "card3",
           title: "快速",
           tips: "快速准确的分析结果",
-          url: require(`../../assets/img/card/card3.png`),
+          url: require(`../../assets/img/card/support.png`),
         },
       ],
     };
   },
 
-  components: {Card},
+  components: { Card },
 
   computed: {},
 
@@ -57,8 +57,7 @@ export default {
 <style lang='css' scoped>
 .cardtab {
   height: 800px;
-  /* background-image: url("../../assets/img/onething.jpg"); */
-  background-color: #f3f3f3;
+  background-color: var(--white);
   background-size: cover;
   background-position-x: -700px;
 }
@@ -74,11 +73,16 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 h2 {
   display: inline-block;
-  color:#183788;
+  color: #183788;
   font-size: 40px;
   font-weight: 200;
+}
+p {
+  color: var(--grey);
+  margin: 10px;
 }
 </style>

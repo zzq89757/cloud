@@ -3,10 +3,8 @@
   <div class="card">
     <div>
       <h3>{{title}}</h3>
+      <img :src="imgSrc" alt=""/>
       <h2>{{tips}}</h2>
-      <slot name="img">
-      <img src="../../assets/img/card/card1.png" alt=""/>
-      </slot>
     </div>
   </div>
 </template>
@@ -34,28 +32,35 @@ export default {
       type:String,
       require:true,
       default:"快速准确的分析结果"
+    },
+    imgSrc:{
+      type:String,
+      require:true
     }
   }
 };
 </script>
 <style lang='css' scoped>
 h3 {
+  margin: 30px;
+  color:var(--blue);
   font-size: 40px;
   font-weight: 300;
-  margin: 30px;
+}
+h2{
+  color: var(--grey);
 }
 .card {
   width: 320px;
   height: 320px;
   display: inline-block;
-  background-color: rgba(87, 76, 252, 0.349);
+  /* background-color: rgba(87, 76, 252, 0.349); */
   border-radius: 20px;
 }
-.card:hover {
-  background-color: rgba(72, 59, 255, 0.664);
-}
+
 .card img {
   margin: 30px;
   width: 160px;
+  height:120px;
 }
 </style>

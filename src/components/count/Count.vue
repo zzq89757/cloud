@@ -42,6 +42,6 @@ h2 {
   display: inline-block;
   font-size: 40px;
   font-weight: 200;
-  color: #01237c;
+  color: var(--blue);
 }
 </style>
