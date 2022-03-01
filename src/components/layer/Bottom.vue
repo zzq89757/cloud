@@ -1,105 +1,71 @@
+<!--  -->
 <template>
-  <div class="page">
-    <div class="wrapperInner">
-      <div class="group">
-        <img
-          class="banner"
-          src="../../assets/img/layer/img_0.png"
-        />
-        <img
-          class="cover"
-          src="../../assets/img/layer/img_1.png"
-        />
-      </div>
-      <div class="primary">
-        <img
-          class="layer"
-          src="../../assets/img/layer/img_2.png"
-        />
-        <img
-          class="horizontalLine"
-          src="../../assets/img/layer/img_3.png"
-        />
-        <span class="tag">关于我们</span> <span class="title">我们是谁</span>
-        <span class="article"
-          >XXX是上海网络科技有限公司旗下素材在线交易网站，于20XX年7月上线运营。主要服务包括广告设计、淘宝设计、企业办公模板等设计素材，提供市场需求的矢量图、psd源文件、ppt下载等。</span
-        >
-        <div class="iconDownWrapper">
-          <img
-            class="iconDown"
-            src="../../assets/img/layer/img_4.png"
-          />
-        </div>
-        <div class="view">
-          <img
-            class="banner1"
-            src="../../assets/img/layer/img_5.png"
-          />
-          <img
-            class="iconCircle"
-            src="../../assets/img/layer/img_6.png"
-          />
-          <img
-            class="iconMenu"
-            src="../../assets/img/layer/img_7.png"
-          />
-          <img
-            class="iconCircle1"
-            src="../../assets/img/layer/img_8.png"
-          />
-          <img
-            class="iconDown1"
-            src="../../assets/img/layer/img_9.png"
-          />
-          <img
-            class="dot"
-            src="../../assets/img/layer/img_10.png"
-          />
-        </div>
-        <div class="iconCircleWrapper">
-          <img
-            class="iconCircle2"
-            src="../../assets/img/layer/img_11.png"
-          />
-          <img
-            class="iconCircle3"
-            src="../../assets/img/layer/img_12.png"
-          />
-        </div>
-        <img
-          class="iconCircle4"
-          src="../../assets/img/layer/img_13.png"
-        />
-        <img
-          class="largeIcon"
-          src="../../assets/img/layer/img_14.png"
-        />
-        <img
-          class="iconPiece"
-          src="../../assets/img/layer/img_15.png"
-        />
+  <div>
+    <div class="container">
+      <!-- <img src="@/assets/img/layer/img_2.png" class="bg"/> -->
+      <img src="@/assets/img/layer/img_5.png" class="computer">
+      <div class="word">
+        <CenterBanner :tips="'关于我们'" :title="'我们是谁'" class="title"></CenterBanner>
+        <span>
+          诺唯赞是一家围绕酶、抗原、抗体等功能性蛋白及高分子有机材料进行技术研发和产品开发的生物科技企业，依托于自主建立的关键共性技术平台，先后进入了生物科研、体外诊断、生物医药等业务领域，是国内少数同时具有自主可控上游技术开发能力和终端产品生产能力的研发创新型企业，智造“生物芯片”，为生物科技行业发展提供源动力。
+        </span>
       </div>
     </div>
   </div>
 </template>
+
 <script>
-
-
-
+import CenterBanner from "../banner/CenterBanner.vue";
 export default {
-  components: {
-
-  },
-  data() {
+  data () {
     return {
-      constants: {}
-    }
-  },
-  methods: {
-
+    };
   },
 
+  components: { CenterBanner },
+
+  computed: {},
+
+  mounted: {},
+
+  methods: {}
 }
-</script>
 
-<style src="@/assets/css/bottom.css" />
+</script>
+<style lang='css' scoped>
+.container{
+  height: 800px;
+  background-color: var(--white);
+  position: relative;
+}
+.bg{
+  width: 100%;
+}
+.computer{
+  width: 400px;
+  /* height: 405px; */
+  position: absolute;
+  bottom: 160px;
+  left: 320px;
+}
+.word{
+  width: 400px;
+  position: absolute;
+  right: 130px;
+  bottom:320px;
+  text-align: left;
+}
+.word span{
+  color: var(--grey);
+  letter-spacing: 0px;
+}
+.title{
+  height: 140px;
+  display: flex;
+  align-items: flex-start;
+  margin: 0;
+}
+.title p{
+  margin: 0;
+}
+</style>

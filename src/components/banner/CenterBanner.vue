@@ -1,6 +1,6 @@
 <!--  -->
 <template>
-  <div class="kouhao" :style="{ backgroundColor: isBlue.backgroundColor }">
+  <div class="kouhao">
     <p :style="{ color: isBlue.tipscolor }">——&nbsp&nbsp {{ tips }} &nbsp&nbsp——</p>
     <h2 :style="{ color: isBlue.titlecolor }">{{ title }}</h2>
   </div>
@@ -57,11 +57,11 @@ export default {
 h2 {
   display: inline-block;
   color: var(--white);
-  font-size: 40px;
+  font-size: 36px;
   font-weight: 200;
 }
 p {
   color: var(--white);
-  margin: 10px;
+  margin: 10px 0 ;
 }
 </style>

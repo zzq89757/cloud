@@ -2,9 +2,7 @@
   <div class="home">
     <NavBar></NavBar>
     <Banner ></Banner>
-    <CenterBanner></CenterBanner>
     <CardTable></CardTable>
-    <CenterBanner :mainstyle="'blue'" :tips="'我们的服务'" :title="'我们能提供什么'"></CenterBanner>
     <mini-card-table></mini-card-table>
     <Count></Count>
     <Bottom></Bottom>

@@ -1,6 +1,7 @@
 <!--  -->
 <template>
   <div class="cardtab">
+    <CenterBanner></CenterBanner>
     <div class="main_card">
       <Card
         :title="item.title"
@@ -15,6 +16,7 @@
 
 <script>
 import Card from '@/components/card/Card';
+import CenterBanner from '../banner/CenterBanner.vue';
 export default {
   data() {
     return {
@@ -41,7 +43,7 @@ export default {
     };
   },
 
-  components: { Card },
+  components: { Card, CenterBanner },
 
   computed: {},
 
@@ -52,13 +54,14 @@ export default {
 </script>
 <style lang='css' scoped>
 .cardtab {
+  width: 100%;
   height: 800px;
   background-color: var(--white);
   background-size: cover;
-  background-position-x: -700px;
   
 }
 .main_card {
+  width: var(--content-size);
   display: flex;
   align-items: center;
   justify-content: space-around;
