@@ -62,6 +62,6 @@ h2 {
 }
 p {
   color: var(--white);
-  margin: 10px 0 ;
+  margin: 14px 0 ;
 }
 </style>

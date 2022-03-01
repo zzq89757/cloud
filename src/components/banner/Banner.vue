@@ -1,6 +1,6 @@
 <!--  -->
 <template>
-  <div >
+  <div class="banner">
     <img class="banner1" src="@/assets/img/banner/banner.png" />
     <img class="banner2" src="@/assets/img/banner/banner-1.png" />
     <div class="content-item content1">
@@ -61,12 +61,14 @@ export default {
 };
 </script>
 <style scoped>
+.banner{
+  height: 765px;
+}
 .content1 {
   margin: auto;
   display: flex;
   justify-content: space-between;
   width: 1200px;
-  height: 100%;
   padding-top: 126px;
   padding-bottom: 96px;
 }

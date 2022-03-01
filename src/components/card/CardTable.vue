@@ -1,6 +1,8 @@
 <!--  -->
 <template>
   <div class="cardtab">
+    <img src="@/assets/img/cover/cover1.png" alt="" class="cover1"/>
+    <img src="@/assets/img/cover/cover2.png" alt="" class="cover2"/>
     <CenterBanner></CenterBanner>
     <div class="main_card">
       <Card
@@ -15,8 +17,8 @@
 </template>
 
 <script>
-import Card from '@/components/card/Card';
-import CenterBanner from '../banner/CenterBanner.vue';
+import Card from "@/components/card/Card";
+import CenterBanner from "../banner/CenterBanner.vue";
 export default {
   data() {
     return {
@@ -56,9 +58,9 @@ export default {
 .cardtab {
   width: 100%;
   height: 800px;
+  position: relative;
   background-color: var(--white);
   background-size: cover;
-  
 }
 .main_card {
   width: var(--content-size);
@@ -66,8 +68,17 @@ export default {
   align-items: center;
   justify-content: space-around;
   height: 500px;
-  margin:  auto;
+  margin: auto;
 }
-
-
+.cover1{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.cover2{
+  position: absolute;
+  width: 326px;
+  bottom: 0;
+  left: 0;
+}
 </style>

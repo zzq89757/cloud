@@ -2,8 +2,9 @@
 <template>
   <div>
     <div class="container">
-      <!-- <img src="@/assets/img/layer/img_2.png" class="bg"/> -->
-      <img src="@/assets/img/layer/img_5.png" class="computer">
+      <img src="@/assets/img/about/cover.png" class="bg" alt=""/>
+      <img src="@/assets/img/about/layer.png" class="layer" alt=""/>
+      <img src="@/assets/img/layer/img_5.png" class="computer" alt="">
       <div class="word">
         <CenterBanner :tips="'关于我们'" :title="'我们是谁'" class="title"></CenterBanner>
         <span>
@@ -39,6 +40,14 @@ export default {
   position: relative;
 }
 .bg{
+  height: 100%;
+  position: absolute;
+  right: 0;
+}
+.layer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
 }
 .computer{
