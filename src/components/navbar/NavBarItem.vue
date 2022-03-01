@@ -4,7 +4,7 @@
       <div class="logo">
           <slot name="logo">
         <a href="http://www.vazyme.com" target="blank">
-            <img src="@/assets/img/logo_white_nopadding.png" />
+            <img src="@/assets/img/logo/logo_white_nopadding.png" />
         </a>
           </slot>
       </div>

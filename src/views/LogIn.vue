@@ -11,7 +11,7 @@
           <NavBar></NavBar>
         </nav>
         <section id="login_box">
-          <img src="../assets/img/logo_white_nopadding.png" />
+          <img src="../assets/img/logo/logo_white_nopadding.png" />
           <h3>欢迎登录</h3>
           <div class="username_input">
             <input type="text" placeholder="请输入用户名" spellcheck="false" />

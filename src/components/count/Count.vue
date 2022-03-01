@@ -35,7 +35,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url("../../assets/img/the world.png");
+  background: url("../../assets/img/banner/the\ world.png");
   background-size: cover;
 }
 h2 {
