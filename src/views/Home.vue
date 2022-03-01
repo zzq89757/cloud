@@ -2,8 +2,12 @@
   <div class="home">
     <NavBar></NavBar>
     <Banner ></Banner>
-    <CardTable class="shadow"></CardTable>
-    <!-- <Count></Count> -->
+    <CenterBanner></CenterBanner>
+    <CardTable></CardTable>
+    <CenterBanner :mainstyle="'blue'" :tips="'我们的服务'" :title="'我们能提供什么'"></CenterBanner>
+    <mini-card-table></mini-card-table>
+    <Count></Count>
+    <Bottom></Bottom>
     <Footer></Footer>
   </div>
 </template>
@@ -14,12 +18,15 @@ import Banner from "@/components/banner/Banner";
 import Footer from "@/components/footer/Footer";
 import CardTable from "@/components/card/CardTable";
 import Count from "@/components/count/Count";
+import CenterBanner from "../components/banner/CenterBanner";
+import MiniCardTable from '../components/card/MiniCardTable.vue';
+import Bottom from "../components/layer/Bottom.vue";
 export default {
   name: "home",
   data() {
     return {};
   },
-  components: { NavBar, Footer, Banner, CardTable, Count },
+  components: { NavBar, Footer, Banner, CardTable, Count, CenterBanner, MiniCardTable, Bottom },
   methods: {},
 };
 </script>
@@ -38,8 +45,5 @@ h3 {
   font-size: 40px;
   font-weight: 300;
   margin: 20px;
-}
-.shadow{
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
 }
 </style>

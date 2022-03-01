@@ -1,0 +1,224 @@
+.page {
+  width: 1920px;
+  height: 3032px;
+}
+.page .wrapperInner {
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-direction: row;
+  background-color: #ffffff;
+  height: 3032px;
+}
+.page .group {
+  display: flex;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  align-items: center;
+  flex-direction: row;
+  background-color: #f9f9f9;
+  width: 1920px;
+  height: 2325px;
+  overflow: hidden;
+}
+.page .banner {
+  position: absolute;
+  top: 69px;
+  right: 0px;
+  width: 1393px;
+  height: 1120px;
+  overflow: hidden;
+}
+.page .cover {
+  position: absolute;
+  top: 57px;
+  right: 0px;
+  width: 1405px;
+  height: 1117px;
+  overflow: hidden;
+}
+.page .primary {
+  display: flex;
+  position: relative;
+  align-items: flex-end;
+  flex-direction: row;
+  margin-top: 269px;
+}
+.page .layer {
+  position: relative;
+  width: 1920px;
+  height: 2642px;
+  overflow: hidden;
+}
+.page .horizontalLine {
+  position: absolute;
+  top: 1353px;
+  right: 823px;
+  width: 24px;
+  height: 1px;
+  overflow: hidden;
+}
+.page .tag {
+  position: absolute;
+  top: 1345px;
+  right: 747px;
+  text-align: left;
+  text-decoration: none;
+  line-height: 16px;
+  letter-spacing: 0px;
+  white-space: nowrap;
+  color: #666666;
+  font-size: 16px;
+}
+.page .title {
+  position: absolute;
+  top: 1383px;
+  right: 706px;
+  text-align: left;
+  text-decoration: none;
+  line-height: 36px;
+  letter-spacing: 0px;
+  white-space: nowrap;
+  color: #01237c;
+  font-size: 36px;
+}
+.page .article {
+  webkit-box-orient: vertical;
+  display: -webkit-inline-box;
+  webkit-line-clamp: 4;
+  position: absolute;
+  top: 1466px;
+  right: 422px;
+  width: 428px;
+  height: 102px;
+  overflow: hidden;
+  text-align: left;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  line-height: 26px;
+  letter-spacing: 0px;
+  color: #666666;
+  font-size: 16px;
+}
+.page .iconDownWrapper {
+  display: flex;
+  position: absolute;
+  top: 1889px;
+  right: 745px;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  border-radius: 32px;
+  background-color: #ffffff;
+  box-shadow: 0px 11px 21px
+    rgba(203.76265257597, 203.76265257597, 223.000001907349, 0.5);
+  width: 64px;
+  height: 64px;
+  overflow: hidden;
+}
+.page .iconDown {
+  width: 14px;
+  height: 16px;
+}
+.page .view {
+  display: flex;
+  position: absolute;
+  top: 1206px;
+  left: 278px;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: center;
+}
+.page .banner1 {
+  position: relative;
+  width: 668px;
+  height: 760px;
+}
+.page .iconCircle {
+  position: absolute;
+  top: 101px;
+  left: 97px;
+  width: 46px;
+  height: 46px;
+  overflow: hidden;
+}
+.page .iconMenu {
+  position: absolute;
+  top: 232px;
+  right: 80px;
+  width: 24px;
+  height: 24px;
+}
+.page .iconCircle1 {
+  position: absolute;
+  right: 64px;
+  bottom: 45px;
+  width: 25px;
+  height: 25px;
+  overflow: hidden;
+}
+.page .iconDown1 {
+  position: absolute;
+  right: 55px;
+  bottom: 57px;
+  width: 43px;
+  height: 1px;
+  overflow: hidden;
+}
+.page .dot {
+  position: absolute;
+  right: 55px;
+  bottom: 54px;
+  width: 5px;
+  height: 1px;
+  overflow: hidden;
+}
+.page .iconCircleWrapper {
+  display: flex;
+  position: absolute;
+  top: 1568px;
+  left: 106px;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+}
+.page .iconCircle2 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 46px;
+  height: 46px;
+  overflow: hidden;
+}
+.page .iconCircle3 {
+  position: relative;
+  margin-top: 1px;
+  width: 25px;
+  height: 25px;
+  overflow: hidden;
+}
+.page .iconCircle4 {
+  position: absolute;
+  top: 1569px;
+  right: 910px;
+  width: 35px;
+  height: 35px;
+  overflow: hidden;
+}
+.page .largeIcon {
+  position: absolute;
+  top: 1581px;
+  left: 0px;
+  width: 64px;
+  height: 16px;
+}
+.page .iconPiece {
+  position: absolute;
+  top: 2008px;
+  left: 333px;
+  width: 22px;
+  height: 22px;
+}

@@ -67,8 +67,8 @@ export default {
   justify-content: space-between;
   width: 1200px;
   height: 100%;
-  padding-top: 73px;
-  padding-bottom: 73px;
+  padding-top: 126px;
+  padding-bottom: 96px;
 }
 .content1 img {
   width: 480px;

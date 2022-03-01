@@ -1,10 +1,6 @@
 <!--  -->
 <template>
   <div class="cardtab">
-    <div class="kouhao">
-      <p>——  &nbsp &nbsp我们的优势  &nbsp&nbsp——</p>
-      <h2>为什么选择我们</h2>
-    </div>
     <div class="main_card">
       <Card
         :title="item.title"
@@ -60,29 +56,15 @@ export default {
   background-color: var(--white);
   background-size: cover;
   background-position-x: -700px;
+  
 }
 .main_card {
   display: flex;
   align-items: center;
   justify-content: space-around;
   height: 500px;
-  margin: 10px auto;
+  margin:  auto;
 }
-.kouhao {
-  height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-h2 {
-  display: inline-block;
-  color: #183788;
-  font-size: 40px;
-  font-weight: 200;
-}
-p {
-  color: var(--grey);
-  margin: 10px;
-}
+
+
 </style>
