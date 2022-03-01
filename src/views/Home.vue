@@ -3,7 +3,7 @@
     <NavBar></NavBar>
     <Banner ></Banner>
     <CardTable class="shadow"></CardTable>
-    <Count></Count>
+    <!-- <Count></Count> -->
     <Footer></Footer>
   </div>
 </template>

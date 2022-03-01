@@ -45,8 +45,8 @@ h3 {
   margin: 30px;
 }
 .card {
-  width: 380px;
-  height: 380px;
+  width: 320px;
+  height: 320px;
   display: inline-block;
   background-color: rgba(87, 76, 252, 0.349);
   border-radius: 20px;

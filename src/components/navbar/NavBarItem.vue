@@ -2,11 +2,11 @@
   <div id="nav">
     <nav class="topbar">
       <div class="logo">
-        <slot name="logo">
-          <a href="http://www.vazyme.com" target="blank">
+          <slot name="logo">
+        <a href="http://www.vazyme.com" target="blank">
             <img src="@/assets/img/logo_white_nopadding.png" />
-          </a>
-        </slot>
+        </a>
+          </slot>
       </div>
       <div class>
         <router-link
@@ -15,11 +15,12 @@
           :key="item.title"
           :to="{ path: '/' + item.path }"
           class="title"
+          :class="item.class"
         >{{ item.title }}</router-link>
       </div>
-      <div v-if="icon_data.length">
+      <div v-if="icon_data.length ">
         <slot name="icon">
-          <a v-for="item in icon_data" :key="item.title">
+          <a v-for="item in icon_data" :key="item.title" >
             <img :src="item.src" />
           </a>
         </slot>
@@ -37,15 +38,15 @@ export default {
     return {
     }
   },
-  props: {
-    navobj: {
-      type: Array,
-      require: true,
-      default: []
+  props:{
+    navobj:{
+      type:Array,
+      require:true,
+      default:[]
     },
-    icon_data: {
-      type: Array,
-      require: false,
+    icon_data:{
+      type:Array,
+      require:false,
     }
   }
 };
@@ -87,5 +88,8 @@ a {
 .topbar .title:hover {
   color: #fff;
   border-bottom: 3px solid #fff;
+}
+.topbar .last{
+  margin-right: 0px ;
 }
 </style>

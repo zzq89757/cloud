@@ -32,8 +32,8 @@ export default {
 </script>
 <style lang='css' scoped>
 footer {
-  background-color: #031032;
-  background-image: linear-gradient(#031032, #000000, 180deg);
+  background-color: #01237c;
+  /* background-image: linear-gradient(#031032, #000000, 180deg); */
 }
 footer p {
   font-size: 14px;

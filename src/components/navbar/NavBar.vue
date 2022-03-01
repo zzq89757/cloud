@@ -35,6 +35,7 @@ export default {
         {
           title: "注册",
           path: "signup",
+          class:"last"
         },
       ],
       icon_data: []

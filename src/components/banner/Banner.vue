@@ -1,23 +1,33 @@
 <!--  -->
 <template>
-  <div class="content-item content1">
-    <div class="main_content">
-      <div class="word">
-        <slot name="title">
-          <h2>{{message.title}}</h2>
-        </slot>
-        <slot name="tips">
-          <p>{{message.tips}}</p>
+  <div style="width:100%">
+    <div class="content-item content1">
+      <div class="main_content">
+        <div class="word mini">
+          <slot name="title">
+            <p >{{ message.addition }}</p>
+          </slot>
+        </div>
+        <div class="word">
+          <slot name="title">
+            <h2>{{ message.title }}</h2>
+          </slot>
+        </div>
+        <div class="word">
+          <slot name="tips">
+            <p>{{ message.tips }}</p>
+          </slot>
+        </div>
+
+        <slot name="button">
+          <button>{{ message.buttonValue }}</button>
         </slot>
       </div>
-      <slot name="button">
-        <button>{{message.buttonValue}}</button>
-      </slot>
-    </div>
-    <div>
-      <slot name="img">
-        <img src="@/assets/img/newbg.png" alt=""/>
-      </slot>
+      <div>
+        <slot name="img">
+          <img src="@/assets/img/newbg.png" alt />
+        </slot>
+      </div>
     </div>
   </div>
 </template>
@@ -26,14 +36,15 @@
 export default {
   data() {
     return {};
-  },props:{
-    message:{
-      type:Object,
-      required:false,
-      default:{
-        title:"诺唯赞生物信息云平台",
-        tips:"一站式数据分析解决方案",
-        buttonValue:"立即使用"
+  }, props: {
+    message: {
+      type: Object,
+      required: false,
+      default: {
+        title: "诺唯赞生物信息云平台",
+        tips: "一站式数据分析解决方案",
+        addition:"一个平台，所有的托管",
+        buttonValue: "立即使用"
       }
     }
   },
@@ -49,51 +60,54 @@ export default {
 </script>
 <style scoped>
 .content1 {
+  margin: auto;
   display: flex;
   justify-content: flex-end;
-  width: 100%;
+  width: 1200px;
   height: 100%;
-  padding-top: 100px;
-  padding-bottom: 50px;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
-  /* background: -webkit-radial-gradient(top right, ellipse, rgb(1, 1, 14), #070722, #0c0f60); */
+  padding-top: 73px;
+  padding-bottom: 73px;
 }
 .content1 img {
-  width: 612px;
-  margin-top: 20px;
-  height: 500px;
+  width: 600px;
+  height: 460px;
 }
 .main_content {
+  display: flex;
   width: 50%;
-  margin-top: 50px;
-  padding-right: 80px;
-  position: relative;
+  margin: 20px 0px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
 }
 .main_content h2 {
-  font-size: 50px;
+  font-size: 45px;
   font-weight: 300;
-  margin: 20px;
 }
 .main_content p {
-  margin: 45px;
   font-size: 30px;
   font-weight: 200;
 }
 .main_content button {
-  margin: 43px;
-  width: 200px;
-  height: 60px;
-  border-radius: 40px;
+  width: 180px;
+  height: 50px;
+  display: inline-block;
+  text-align: center;
+  color: #fdfeff;
+  background-image: linear-gradient(30deg, #007ccd 3.1%, #08cbff 100%);
+  border-radius: 3px;
+  line-height: 48px;
+  font-size: 18px;
   outline: none;
-  font-family: "Arial,PingfangSC,Microsoft YaHei,Helvetica Neue,Helvetica,STHeiTi,sans-serif";
-  font-size: 16px;
-  color: #fff;
-  background: #110d53;
-  border: 1px solid #fff;
+  border: none;
   transform: all 1s ease;
 }
 button:hover {
-  background: #6b6b6b36;
+  background-image: linear-gradient(90deg,#007ccd 4%,#08cbff 100%);
   cursor: pointer;
+}
+.content1 .main_content .mini p{
+  font-size: 20px;
+  font-weight: 200;
 }
 </style>

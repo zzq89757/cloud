@@ -57,7 +57,8 @@ export default {
 <style lang='css' scoped>
 .cardtab {
   height: 800px;
-  background-image: url("../../assets/img/onething.jpg");
+  /* background-image: url("../../assets/img/onething.jpg"); */
+  background-color: #f3f3f3;
   background-size: cover;
   background-position-x: -700px;
 }
@@ -76,6 +77,7 @@ export default {
 }
 h2 {
   display: inline-block;
+  color:#183788;
   font-size: 40px;
   font-weight: 200;
 }
