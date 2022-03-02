@@ -60,12 +60,10 @@ export default {
 footer {
   background-color: #f2f7fb;
   width: 1200px;
-  /* height: 200px; */
   margin: auto;
 }
 footer p {
   font-size: 14px;
-  /* margin: 10px; */
   color: var(--grey);
 }
 .footer-top {
@@ -98,7 +96,6 @@ footer p {
   width: 260px;
   height: 120px;
   border-bottom: 1px solid #ffffff0d;
-  /* padding: 20px 0; */
 }
 .logo img {
   width: 152px;
@@ -136,7 +133,7 @@ span {
   color: var(--blue);
   user-select: all;
 }
-.code{
+.code {
   display: flex;
   flex-direction: column;
 }

@@ -5,7 +5,7 @@
 </template>
 
 <script>
-// console.log("%c"+"power by zzq89757@gmail.com","color:blue");
+console.log("%c"+"test by zzq","color:blue");
 import Vue from "vue";
 Vue.directive("countRunning", {
   bind(el) {
