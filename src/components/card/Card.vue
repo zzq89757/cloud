@@ -1,12 +1,12 @@
 <!--  -->
 <template>
-  <div class="card">
-    <div>
-      <h3>{{title}}</h3>
-      <img :src="imgSrc" alt=""/>
-      <h2>{{tips}}</h2>
+    <div class="card">
+      <div>
+        <h3>{{ title }}</h3>
+        <img :src="imgSrc" alt />
+        <h2>{{ tips }}</h2>
+      </div>
     </div>
-  </div>
 </template>
 
 <script>
@@ -22,20 +22,20 @@ export default {
   mounted: {},
 
   methods: {},
-  props:{
-    title:{
-      type:String,
-      require:true,
-      default:"快速"
+  props: {
+    title: {
+      type: String,
+      require: true,
+      default: "快速"
     },
-    tips:{
-      type:String,
-      require:true,
-      default:"快速准确的分析结果"
+    tips: {
+      type: String,
+      require: true,
+      default: "快速准确的分析结果"
     },
-    imgSrc:{
-      type:String,
-      require:true
+    imgSrc: {
+      type: String,
+      require: true
     }
   }
 };
@@ -43,11 +43,11 @@ export default {
 <style lang='css' scoped>
 h3 {
   margin: 30px;
-  color:var(--blue);
+  color: var(--blue);
   font-size: 40px;
   font-weight: 300;
 }
-h2{
+h2 {
   color: var(--grey);
 }
 .card {
@@ -61,6 +61,6 @@ h2{
 .card img {
   margin: 30px;
   width: 160px;
-  height:120px;
+  height: 120px;
 }
 </style>

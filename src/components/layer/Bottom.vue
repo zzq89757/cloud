@@ -3,9 +3,9 @@
   <div>
     <div class="container">
       <div class="dot">
-        <img src="@/assets/img/layer/icon-circle@2x.png" alt class="icon-circle"/>
-        <img src="@/assets/img/layer/icon-circle-1@2x.png" alt class="icon-circle-3"/>
-        <img src="@/assets/img/layer/icon-circle-4@2x.png" alt class="icon-circle-4"/>
+        <img src="@/assets/img/layer/icon-circle@2x.png" alt class="icon-circle" />
+        <img src="@/assets/img/layer/icon-circle-1@2x.png" alt class="icon-circle-3" />
+        <img src="@/assets/img/layer/icon-circle-4@2x.png" alt class="icon-circle-4" />
         <!-- <img src="@/assets/img/layer/horizontal-line@2x.png" alt="" class="horizon"> -->
         <div class="wave-box">
           <img src="@/assets/img/layer/wave.png" alt class="wave" />
@@ -20,12 +20,13 @@
       <div class="background">
         <img src="@/assets/img/about/cover.png" class="bg" alt />
         <img src="@/assets/img/about/layer.png" class="layer" alt />
-        <img src="@/assets/img/layer/img_5.png" class="computer" alt />
       </div>
-
-      <div class="word">
-        <CenterBanner :tips="'关于我们'" :title="'我们是谁'" class="title"></CenterBanner>
-        <span>诺唯赞是一家围绕酶、抗原、抗体等功能性蛋白及高分子有机材料进行技术研发和产品开发的生物科技企业，依托于自主建立的关键共性技术平台，先后进入了生物科研、体外诊断、生物医药等业务领域，是国内少数同时具有自主可控上游技术开发能力和终端产品生产能力的研发创新型企业，智造“生物芯片”，为生物科技行业发展提供源动力。</span>
+      <div class="front">
+        <img src="@/assets/img/layer/img_5.png" class="computer" alt />
+        <div class="word">
+          <CenterBanner :tips="'关于我们'" :title="'我们是谁'" class="title"></CenterBanner>
+          <span>诺唯赞是一家围绕酶、抗原、抗体等功能性蛋白及高分子有机材料进行技术研发和产品开发的生物科技企业，依托于自主建立的关键共性技术平台，先后进入了生物科研、体外诊断、生物医药等业务领域，是国内少数同时具有自主可控上游技术开发能力和终端产品生产能力的研发创新型企业，智造“生物芯片”，为生物科技行业发展提供源动力。</span>
+        </div>
       </div>
     </div>
   </div>
@@ -60,6 +61,14 @@ export default {
   position: absolute;
   right: 0;
 }
+.front{
+  width: 1200px;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .layer {
   position: absolute;
   bottom: 0;
@@ -68,16 +77,14 @@ export default {
 }
 .computer {
   width: 400px;
-  /* height: 405px; */
-  position: absolute;
-  bottom: 160px;
-  left: 320px;
+  height: 405px;
+  z-index: 100;
 }
 .word {
   width: 400px;
-  position: absolute;
+  /* position: absolute;
   right: 130px;
-  bottom: 320px;
+  bottom: 320px; */
   text-align: left;
 }
 .word span {
@@ -123,14 +130,14 @@ export default {
   left: 108px; */
   z-index: 2;
 }
-.icon-circle{
-    position: absolute;
+.icon-circle {
+  position: absolute;
   left: 23%;
-  top: 26%;
+  top: 15%;
   z-index: 2;
 }
-.icon-circle-4{
-    position: absolute;
+.icon-circle-4 {
+  position: absolute;
   right: 45%;
   top: 47%;
   z-index: 2;
@@ -141,11 +148,11 @@ export default {
   top: 47%;
   transform: translateY(-50%) translateX(-50%);
 }
-.icon-circle-3{
+.icon-circle-3 {
   position: absolute;
   bottom: 150px;
   left: 0px;
   transform: translateX(2600%);
   z-index: 2;
-} 
+}
 </style>

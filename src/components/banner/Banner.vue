@@ -4,32 +4,37 @@
     <img class="banner1" src="@/assets/img/banner/banner.png" />
     <img class="banner2" src="@/assets/img/banner/banner-1.png" />
     <div class="content-item content1">
-      <div class="main_content">
-        <div class="word mini">
-          <slot name="title">
-            <p>{{ message.addition }}</p>
-          </slot>
-        </div>
-        <div class="word">
-          <slot name="title">
-            <h2>{{ message.title }}</h2>
-          </slot>
-        </div>
-        <div class="word">
-          <slot name="tips">
-            <p>{{ message.tips }}</p>
-          </slot>
-        </div>
+      <transition name="font-in">
+        <div class="main_content" v-if="show">
+          <div class="word mini">
+            <slot name="title">
+              <p>{{ message.addition }}</p>
+            </slot>
+          </div>
+          <div class="word">
+            <slot name="title">
+              <h2>{{ message.title }}</h2>
+            </slot>
+          </div>
+          <div class="word">
+            <slot name="tips">
+              <p>{{ message.tips }}</p>
+            </slot>
+          </div>
 
-        <slot name="button">
-          <button>{{ message.buttonValue }}</button>
-        </slot>
-      </div>
-      <div>
-        <slot name="img">
-          <img src="@/assets/img/banner/cloud_server.png" alt />
-        </slot>
-      </div>
+          <slot name="button">
+            <button>{{ message.buttonValue }}</button>
+          </slot>
+        </div>
+      </transition>
+
+      <transition name="slide-fade">
+        <div v-if="show">
+          <slot name="img">
+            <img src="@/assets/img/banner/cloud_server.png" alt />
+          </slot>
+        </div>
+      </transition>
     </div>
   </div>
 </template>
@@ -37,7 +42,9 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      show: false,
+    };
   }, props: {
     message: {
       type: Object,
@@ -50,18 +57,47 @@ export default {
       }
     }
   },
+  created() {
 
+  },
   components: {},
 
   computed: {},
 
-  mounted: {},
+  mounted() {
+    this.show = true;
+  }
+  ,
 
   methods: {},
 };
 </script>
 <style scoped>
-.banner{
+
+/* 可以设置不同的进入和离开动画 */
+/* 设置持续时间和动画函数 */
+.slide-fade-enter-active {
+  transition: all 0.6s ease;
+}
+.slide-fade-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.slide-fade-enter,
+.slide-fade-leave-to {
+  transform: translateX(100px);
+  opacity: 0;
+}
+.font-in-enter-active {
+  transition: all 0.8s ease;
+}
+.font-in-leave-active {
+  transition: all 0.6s ease;
+}
+.font-in-enter,
+.font-in-leave-to {
+  opacity: 0;
+}
+.banner {
   height: 765px;
 }
 .content1 {
@@ -119,7 +155,7 @@ button:hover {
   top: -4%;
   left: 0;
   width: 67%;
-  z-index:-100;
+  z-index: -100;
 }
 .banner2 {
   position: absolute;
