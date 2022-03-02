@@ -1,8 +1,8 @@
 <!--  -->
 <template>
   <div class="cardtab">
-    <img src="@/assets/img/cover/cover1.png" alt="" class="cover1"/>
-    <img src="@/assets/img/cover/cover2.png" alt="" class="cover2"/>
+    <img src="@/assets/img/cover/cover1.png" alt="" class="cover1 cover"/>
+    <img src="@/assets/img/cover/cover2.png" alt="" class="cover2 cover"/>
     <CenterBanner></CenterBanner>
     <div class="main_card">
       <Card
@@ -70,13 +70,18 @@ export default {
   height: 500px;
   margin: auto;
 }
-.cover1{
+.card{
+  z-index: 1;
+}
+.cover{
+
   position: absolute;
+}
+.cover1{
   top: 0;
   left: 0;
 }
 .cover2{
-  position: absolute;
   width: 326px;
   bottom: 0;
   left: 0;

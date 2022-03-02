@@ -2,14 +2,30 @@
 <template>
   <div>
     <div class="container">
-      <img src="@/assets/img/about/cover.png" class="bg" alt=""/>
-      <img src="@/assets/img/about/layer.png" class="layer" alt=""/>
-      <img src="@/assets/img/layer/img_5.png" class="computer" alt="">
+      <div class="dot">
+        <img src="@/assets/img/layer/icon-circle@2x.png" alt class="icon-circle"/>
+        <img src="@/assets/img/layer/icon-circle-1@2x.png" alt class="icon-circle-3"/>
+        <img src="@/assets/img/layer/icon-circle-4@2x.png" alt class="icon-circle-4"/>
+        <!-- <img src="@/assets/img/layer/horizontal-line@2x.png" alt="" class="horizon"> -->
+        <div class="wave-box">
+          <img src="@/assets/img/layer/wave.png" alt class="wave" />
+          <div class="multi-dot">
+            <img src="@/assets/img/layer/icon-circle-1@2x.png" alt class="icon-circle-1" />
+            <img src="@/assets/img/layer/icon-circle-2@2x.png" alt class="icon-circle-2" />
+          </div>
+        </div>
+
+        <img src="@/assets/img/layer/icon-piece@2x.png" alt class="icon-piece icon" />
+      </div>
+      <div class="background">
+        <img src="@/assets/img/about/cover.png" class="bg" alt />
+        <img src="@/assets/img/about/layer.png" class="layer" alt />
+        <img src="@/assets/img/layer/img_5.png" class="computer" alt />
+      </div>
+
       <div class="word">
         <CenterBanner :tips="'关于我们'" :title="'我们是谁'" class="title"></CenterBanner>
-        <span>
-          诺唯赞是一家围绕酶、抗原、抗体等功能性蛋白及高分子有机材料进行技术研发和产品开发的生物科技企业，依托于自主建立的关键共性技术平台，先后进入了生物科研、体外诊断、生物医药等业务领域，是国内少数同时具有自主可控上游技术开发能力和终端产品生产能力的研发创新型企业，智造“生物芯片”，为生物科技行业发展提供源动力。
-        </span>
+        <span>诺唯赞是一家围绕酶、抗原、抗体等功能性蛋白及高分子有机材料进行技术研发和产品开发的生物科技企业，依托于自主建立的关键共性技术平台，先后进入了生物科研、体外诊断、生物医药等业务领域，是国内少数同时具有自主可控上游技术开发能力和终端产品生产能力的研发创新型企业，智造“生物芯片”，为生物科技行业发展提供源动力。</span>
       </div>
     </div>
   </div>
@@ -18,7 +34,7 @@
 <script>
 import CenterBanner from "../banner/CenterBanner.vue";
 export default {
-  data () {
+  data() {
     return {
     };
   },
@@ -34,47 +50,102 @@ export default {
 
 </script>
 <style lang='css' scoped>
-.container{
+.container {
   height: 800px;
   background-color: var(--white);
   position: relative;
 }
-.bg{
+.bg {
   height: 100%;
   position: absolute;
   right: 0;
 }
-.layer{
+.layer {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
 }
-.computer{
+.computer {
   width: 400px;
   /* height: 405px; */
   position: absolute;
   bottom: 160px;
   left: 320px;
 }
-.word{
+.word {
   width: 400px;
   position: absolute;
   right: 130px;
-  bottom:320px;
+  bottom: 320px;
   text-align: left;
 }
-.word span{
+.word span {
   color: var(--grey);
   letter-spacing: 0px;
 }
-.title{
+.title {
   height: 140px;
   display: flex;
   align-items: flex-start;
   margin: 0;
 }
-.title p{
+.title p {
   margin: 0;
 }
+.icon {
+  position: absolute;
+  z-index: 9;
+}
+.icon-piece {
+  left: 340px;
+  bottom: 37px;
+}
+.dot {
+  /* position: absolute; */
+  z-index: 2;
+}
+.wave-box {
+  position: absolute;
+  width: 145px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  bottom: 396px;
+  left: 0px;
+  z-index: 2;
+}
+.multi-dot {
+  display: inline-block;
+  position: relative;
+  /* position: absolute;
+  bottom: 410px;
+  left: 108px; */
+  z-index: 2;
+}
+.icon-circle{
+    position: absolute;
+  left: 23%;
+  top: 26%;
+  z-index: 2;
+}
+.icon-circle-4{
+    position: absolute;
+  right: 45%;
+  top: 47%;
+  z-index: 2;
+}
+.icon-circle-1 {
+  position: absolute;
+  left: 50%;
+  top: 47%;
+  transform: translateY(-50%) translateX(-50%);
+}
+.icon-circle-3{
+  position: absolute;
+  bottom: 150px;
+  left: 0px;
+  transform: translateX(2600%);
+  z-index: 2;
+} 
 </style>

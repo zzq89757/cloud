@@ -4,8 +4,8 @@
     <Banner ></Banner>
     <CardTable></CardTable>
     <mini-card-table></mini-card-table>
-    <Count></Count>
     <Bottom></Bottom>
+    <Count></Count>
     <Footer></Footer>
   </div>
 </template>
