@@ -1,8 +1,10 @@
 <!--  -->
 <template>
   <div>
-    <NavBar></NavBar>
+    <NavBar>     
+    </NavBar>
     <Banner :message="flow_message">
+      <img slot="img" src="@/assets/img/banner/flow.png" alt="" class="banner_right"/>
     </Banner>
     <CenterBanner style="background-color:white" :tips="banner_msg.tips" :title="banner_msg.title"></CenterBanner>
     <Product :productList="data"> </Product>
@@ -61,5 +63,8 @@ export default {
   width: 50%;
   height: 200px;
   display: inline-block;
+}
+.banner_right{
+  width: 486px;
 }
 </style>

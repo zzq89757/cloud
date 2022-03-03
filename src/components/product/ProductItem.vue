@@ -1,7 +1,8 @@
 <!-- s -->
 <template>
   <div class="product_box" @click="jump(product.href)">
-    <img :src="product.src" />
+    <div class="img_box"><img :src="product.src" /></div>
+    
     <h4>{{ product.title }}</h4>
     <p>{{ product.content }}</p>
   </div>
@@ -58,6 +59,11 @@ export default {
 .product_box p {
   font-size: 14px;
   margin: 20px;
+}
+.img_box{
+  width: 100%;
+  height: 50%;
+  background-color: red;
 }
 img {
   height: 68%;
