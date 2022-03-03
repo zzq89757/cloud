@@ -1,8 +1,9 @@
 <!--  -->
 <template>
   <!-- 左边文字内容 -->
-  <div class="content-item content1">
+  <div>
     <banner-bg></banner-bg>
+  <div class="content-item content1">
     <slot name="main">
       <transition name="font-in">
         <div class="main_content" v-show="show">
@@ -29,6 +30,8 @@
       </transition>
     </slot>
   </div>
+  </div>
+    
 </template>
 
 <script>
@@ -39,11 +42,10 @@ export default {
       show: false,
     };
   },
-  activated(){
+  activated() {
     this.show = true;
-    console.log("has been activated");
   },
-  deactivated(){
+  deactivated() {
     this.show = false;
   },
   props: {
@@ -58,13 +60,13 @@ export default {
       },
     },
   },
-  created() {},
+  created() { },
   components: { BannerBg },
 
   computed: {},
 
   mounted() {
-    
+
   },
   methods: {},
 };

@@ -3,43 +3,18 @@
   <div>
     <div class="container">
       <div class="dot">
-        <img
-          src="@/assets/img/layer/icon-circle@2x.png"
-          alt
-          class="icon-circle"
-        />
-        <img
-          src="@/assets/img/layer/icon-circle-1@2x.png"
-          alt
-          class="icon-circle-3"
-        />
-        <img
-          src="@/assets/img/layer/icon-circle-4@2x.png"
-          alt
-          class="icon-circle-4"
-        />
-        <!-- <img src="@/assets/img/layer/horizontal-line@2x.png" alt="" class="horizon"> -->
+        <img src="@/assets/img/layer/icon-circle@2x.png" alt class="icon-circle" />
+        <img src="@/assets/img/layer/icon-circle-1@2x.png" alt class="icon-circle-3" />
+        <img src="@/assets/img/layer/icon-circle-4@2x.png" alt class="icon-circle-4" />
         <div class="wave-box">
           <img src="@/assets/img/layer/wave.png" alt class="wave" />
           <div class="multi-dot">
-            <img
-              src="@/assets/img/layer/icon-circle-1@2x.png"
-              alt
-              class="icon-circle-1"
-            />
-            <img
-              src="@/assets/img/layer/icon-circle-2@2x.png"
-              alt
-              class="icon-circle-2"
-            />
+            <img src="@/assets/img/layer/icon-circle-1@2x.png" alt class="icon-circle-1" />
+            <img src="@/assets/img/layer/icon-circle-2@2x.png" alt class="icon-circle-2" />
           </div>
         </div>
 
-        <img
-          src="@/assets/img/layer/icon-piece@2x.png"
-          alt
-          class="icon-piece icon"
-        />
+        <img src="@/assets/img/layer/icon-piece@2x.png" alt class="icon-piece icon" />
       </div>
       <div class="background">
         <img src="@/assets/img/about/cover.png" class="bg" alt />
@@ -47,23 +22,12 @@
       </div>
       <div class="front">
         <transition name="pc1">
-          <img
-            src="@/assets/img/layer/img_5.png"
-            class="computer"
-            alt
-            v-show="isShow"
-          />
+          <img src="@/assets/img/layer/img_5.png" class="computer" alt v-show="isShow" />
         </transition>
         <transition name="pc2">
           <div class="word" v-show="isShow">
-            <CenterBanner
-              :tips="'关于我们'"
-              :title="'我们是谁'"
-              class="title"
-            ></CenterBanner>
-            <span
-              >诺唯赞是一家围绕酶、抗原、抗体等功能性蛋白及高分子有机材料进行技术研发和产品开发的生物科技企业，依托于自主建立的关键共性技术平台，先后进入了生物科研、体外诊断、生物医药等业务领域，是国内少数同时具有自主可控上游技术开发能力和终端产品生产能力的研发创新型企业，智造“生物芯片”，为生物科技行业发展提供源动力。</span
-            >
+            <CenterBanner :tips="'关于我们'" :title="'我们是谁'" class="title"></CenterBanner>
+            <span>诺唯赞是一家围绕酶、抗原、抗体等功能性蛋白及高分子有机材料进行技术研发和产品开发的生物科技企业，依托于自主建立的关键共性技术平台，先后进入了生物科研、体外诊断、生物医药等业务领域，是国内少数同时具有自主可控上游技术开发能力和终端产品生产能力的研发创新型企业，智造“生物芯片”，为生物科技行业发展提供源动力。</span>
           </div>
         </transition>
       </div>
@@ -93,7 +57,6 @@ export default {
         window.pageYOffset ||
         document.documentElement.scrollTop ||
         document.body.scrollTop;
-      console.log(scrollTop);
       if (scrollTop > 2200) {
         // 滚动到500时给卡片添加过渡效果 并移除滚动监听
         this.isShow = true;
@@ -117,10 +80,9 @@ export default {
   transform: translateX(-160px);
   opacity: 1;
 }
-.pc2-enter{
-  transform:translateX(160px);
-  opacity:0;
-
+.pc2-enter {
+  transform: translateX(160px);
+  opacity: 0;
 }
 .container {
   height: 800px;
@@ -153,9 +115,6 @@ export default {
 }
 .word {
   width: 400px;
-  /* position: absolute;
-  right: 130px;
-  bottom: 320px; */
   text-align: left;
 }
 .word span {
@@ -180,7 +139,6 @@ export default {
   bottom: 37px;
 }
 .dot {
-  /* position: absolute; */
   z-index: 2;
 }
 .wave-box {
@@ -196,9 +154,6 @@ export default {
 .multi-dot {
   display: inline-block;
   position: relative;
-  /* position: absolute;
-  bottom: 410px;
-  left: 108px; */
   z-index: 2;
 }
 .icon-circle {

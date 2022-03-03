@@ -25,7 +25,7 @@ export default {
 </script>
 <style lang="css" scoped>
 .banner {
-  height: 765px;
+  float: left;
 }
 .banner1 {
   position: absolute;

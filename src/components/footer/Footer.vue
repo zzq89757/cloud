@@ -4,7 +4,7 @@
     <footer>
       <div class="footer-top">
         <div class="logo">
-          <img src="https://crm.vazyme.com/cetool/images/u1102_logo.png" alt />
+          <img src="@/assets/img/logo/logo-blue.png" alt />
           <div class="span_box">
             <div>
               <span class="tips company">南京诺唯赞生物科技股份有限公司</span>
