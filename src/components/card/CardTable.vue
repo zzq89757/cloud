@@ -1,17 +1,19 @@
 <!--  -->
 <template>
   <div class="cardtab">
+    <CenterBanner></CenterBanner>
     <img src="@/assets/img/cover/cover1.png" alt class="cover1 cover" />
     <img src="@/assets/img/cover/cover2.png" alt class="cover2 cover" />
-    <CenterBanner></CenterBanner>
-    <div class="main_card">
-      <Card
-        :title="item.title"
-        :tips="item.tips"
-        :imgSrc="item.url"
-        v-for="item in Img"
-        :key="item.name"
-      ></Card>
+    <div class="main_card" >
+      <transition name="card" v-for="item in Img" :key="item.name">
+        <Card
+          :title="item.title"
+          :tips="item.tips"
+          :imgSrc="item.url"
+          v-show="isShow"
+          
+        ></Card>
+      </transition>
     </div>
   </div>
 </template>
@@ -42,7 +44,11 @@ export default {
           url: require(`../../assets/img/card/support.png`),
         },
       ],
+      isShow: false,
     };
+  },
+  created() {
+    window.addEventListener("scroll", this.handleScroll);
   },
 
   components: { Card, CenterBanner },
@@ -51,10 +57,34 @@ export default {
 
   mounted: {},
 
-  methods: {},
+  methods: {
+    handleScroll() {
+      let scrollTop =
+        window.pageYOffset ||
+        document.documentElement.scrollTop ||
+        document.body.scrollTop;
+      if (scrollTop > 550) {
+        // 滚动到500时给卡片添加过渡效果 并移除滚动监听
+        this.isShow = true;
+        window.removeEventListener("scroll",this.handleScroll);
+      }
+    },
+  },
 };
 </script>
-<style lang='css' scoped>
+<style lang="css" scoped>
+.card-enter-active {
+  transition: all .6s ease;
+  transition: all 2s cubic-bezier(0, -0.01, 0, 0.99) forwards;
+}
+.card-leave-active {
+  transition: all 0.6s ease;
+}
+.card-enter,
+.card-leave-to {
+  transform: translateY(100px) scale(.6);
+  opacity: 0;
+}
 .cardtab {
   width: 100%;
   height: 800px;
@@ -66,7 +96,7 @@ export default {
   width: var(--content-size);
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 500px;
   margin: auto;
 }

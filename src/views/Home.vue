@@ -25,7 +25,8 @@ import LoginBox from "../components/box/LoginBox.vue";
 export default {
   name: "home",
   data() {
-    return {};
+    return {
+    };
   },
   components: {
     NavBar,
@@ -39,7 +40,8 @@ export default {
     BannerBg,
     LoginBox
 },
-  methods: {},
+  methods: {
+  }
 };
 </script>
 <style scoped>

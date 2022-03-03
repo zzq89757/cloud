@@ -5,7 +5,7 @@
     <banner-bg></banner-bg>
     <slot name="main">
       <transition name="font-in">
-        <div class="main_content" v-if="show">
+        <div class="main_content" v-show="show">
           <div class="word mini">
             <p>{{ message.addition }}</p>
           </div>
@@ -39,6 +39,13 @@ export default {
       show: false,
     };
   },
+  activated(){
+    this.show = true;
+    console.log("has been activated");
+  },
+  deactivated(){
+    this.show = false;
+  },
   props: {
     message: {
       type: Object,
@@ -57,7 +64,7 @@ export default {
   computed: {},
 
   mounted() {
-    this.show = true;
+    
   },
   methods: {},
 };
