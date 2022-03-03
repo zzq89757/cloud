@@ -1,33 +1,25 @@
 <!--  -->
 <template>
-  <div class="banner">
-    <img class="banner1" src="@/assets/img/banner/banner.png" />
-    <img class="banner2" src="@/assets/img/banner/banner-1.png" />
-    <div class="content-item content1">
+  <!-- 左边文字内容 -->
+  <div class="content-item content1">
+    <banner-bg></banner-bg>
+    <slot name="main">
       <transition name="font-in">
         <div class="main_content" v-if="show">
           <div class="word mini">
-            <slot name="title">
-              <p>{{ message.addition }}</p>
-            </slot>
+            <p>{{ message.addition }}</p>
           </div>
           <div class="word">
-            <slot name="title">
-              <h2>{{ message.title }}</h2>
-            </slot>
+            <h2>{{ message.title }}</h2>
           </div>
           <div class="word">
-            <slot name="tips">
-              <p>{{ message.tips }}</p>
-            </slot>
+            <p>{{ message.tips }}</p>
           </div>
-
-          <slot name="button">
-            <button>{{ message.buttonValue }}</button>
-          </slot>
+          <button>{{ message.buttonValue }}</button>
         </div>
       </transition>
 
+      <!-- 右边图片内容 -->
       <transition name="slide-fade">
         <div v-if="show">
           <slot name="img">
@@ -35,17 +27,19 @@
           </slot>
         </div>
       </transition>
-    </div>
+    </slot>
   </div>
 </template>
 
 <script>
+import BannerBg from "./BannerBg.vue";
 export default {
   data() {
     return {
       show: false,
     };
-  }, props: {
+  },
+  props: {
     message: {
       type: Object,
       required: false,
@@ -53,27 +47,22 @@ export default {
         title: "诺唯赞生物信息云平台",
         tips: "一站式数据分析解决方案",
         addition: "一个平台，所有的托管",
-        buttonValue: "立即使用"
-      }
-    }
+        buttonValue: "立即使用",
+      },
+    },
   },
-  created() {
-
-  },
-  components: {},
+  created() {},
+  components: { BannerBg },
 
   computed: {},
 
   mounted() {
     this.show = true;
-  }
-  ,
-
+  },
   methods: {},
 };
 </script>
 <style scoped>
-
 /* 可以设置不同的进入和离开动画 */
 /* 设置持续时间和动画函数 */
 .slide-fade-enter-active {
@@ -97,14 +86,12 @@ export default {
 .font-in-leave-to {
   opacity: 0;
 }
-.banner {
-  height: 765px;
-}
 .content1 {
   margin: auto;
   display: flex;
   justify-content: space-between;
   width: 1200px;
+  height: 473px;
   padding-top: 126px;
   padding-bottom: 96px;
 }
@@ -149,17 +136,5 @@ button:hover {
 .content1 .main_content .mini p {
   font-size: 20px;
   font-weight: 200;
-}
-.banner1 {
-  position: absolute;
-  top: -4%;
-  left: 0;
-  width: 67%;
-  z-index: -100;
-}
-.banner2 {
-  position: absolute;
-  right: 0;
-  bottom: -67px;
 }
 </style>

@@ -40,13 +40,13 @@ export default {
 </script>
 <style lang='css' scoped>
 .product_box {
-  width: 240px;
+  width: 250px;
   height: 335px;
   background-color: #fff;
   position: relative;
   color: black;
   display: inline-block;
-  margin: 24px;
+  margin: 24px 0;
   border-radius: 4px;
   overflow: hidden;
   cursor: pointer;

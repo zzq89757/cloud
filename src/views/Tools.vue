@@ -1,23 +1,40 @@
 <template>
   <div id="root">
     <NavBar></NavBar>
-    <Banner>
-      <h2 slot="title">海量数据分析工具</h2>
-      <p slot="tips">开启个性化分析新体验</p>
-    </Banner>
+ <Banner :message="tool_message"> </Banner>
+
+    <CenterBanner
+      style="background-color: white"
+      :tips="banner_msg.tips"
+      :title="banner_msg.title"
+    ></CenterBanner>
     <Product :productList="data"></Product>
+    <Footer></Footer>
   </div>
 </template>
 <script>
 import NavBar from "@/components/navbar/NavBar";
 import Banner from "@/components/banner/Banner";
 import Product from "@/components/product/Product";
-import {request} from "@/network/axios"
+import { request } from "@/network/axios";
+import CenterBanner from "../components/banner/CenterBanner.vue";
+import Footer from "../components/footer/Footer.vue";
+import BannerBg from "../components/banner/BannerBg.vue";
 
 export default {
   data() {
     return {
       data: "",
+      tool_message: {
+        title: "海量数据分析工具",
+        tips: "开启个性化分析新体验",
+        addition: "一个平台，所有的托管",
+        buttonValue: "立即使用",
+      },
+      banner_msg: {
+        tips: "登录查看更多工具",
+        title: "我们的工具",
+      },
     };
   },
   created() {
@@ -28,7 +45,7 @@ export default {
       })
       .catch((err) => console.log(err));
   },
-  components: { NavBar, Banner, Product },
+  components: { NavBar, Banner, Product, CenterBanner, Footer, BannerBg },
 
   computed: {},
 

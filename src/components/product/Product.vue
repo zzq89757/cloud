@@ -1,8 +1,14 @@
 <!--  -->
 <template>
-  <div class="pro">
-    <product-item v-for="item in productList" :key="item.title" :product="item">
-    </product-item>
+  <div class="pro_container">
+    <div class="pro">
+      <product-item
+        v-for="item in productList"
+        :key="item.title"
+        :product="item"
+      >
+      </product-item>
+    </div>
   </div>
 </template>
 
@@ -30,12 +36,18 @@ export default {
   methods: {},
 };
 </script>
-<style lang='css' scoped>
+<style lang="css" scoped>
+.pro_container{
+  width: 100%;
+  background: var(--white);
+  padding-bottom: 60px;
+}
 .pro {
   display: flex;
+  background-color: var(--white);
   flex-wrap: wrap;
-  justify-content: center;
-  width: 1400px;
+  justify-content: space-between;
+  width: 1200px;
   margin: 0 auto;
   background-image: "@/assets/img/onething.jpg";
 }

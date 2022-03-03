@@ -3,9 +3,7 @@
   <div class="count">
     <div>
       <h2 style="display: block; margin-bottom: 20px">目前使用人数</h2>
-      <h2 v-countRunning :data-target="count">
-        0
-      </h2>
+      <h2 v-countRunning :data-target="count">0</h2>
       <h2 style="display: inline-block">+</h2>
     </div>
   </div>
@@ -28,7 +26,7 @@ export default {
   methods: {},
 };
 </script>
-<style lang='css' scoped>
+<style lang="css" scoped>
 .count {
   height: 800px;
   position: relative;

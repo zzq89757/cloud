@@ -1,9 +1,10 @@
 <template>
   <div class="home">
     <NavBar></NavBar>
-    <Banner></Banner>
+    <Banner>
+    </Banner>
     <CardTable></CardTable>
-    <mini-card-table></mini-card-table>
+    <MiniCardTable></MiniCardTable>
     <Bottom></Bottom>
     <!-- <Count></Count> -->
     <Footer></Footer>
@@ -17,14 +18,27 @@ import Footer from "@/components/footer/Footer";
 import CardTable from "@/components/card/CardTable";
 import Count from "@/components/count/Count";
 import CenterBanner from "../components/banner/CenterBanner";
-import MiniCardTable from '../components/card/MiniCardTable.vue';
-import Bottom from "../components/layer/Bottom.vue";
+import MiniCardTable from "../components/card/MiniCardTable";
+import Bottom from "../components/layer/Bottom";
+import BannerBg from "../components/banner/BannerBg.vue";
+import LoginBox from "../components/box/LoginBox.vue";
 export default {
   name: "home",
   data() {
     return {};
   },
-  components: { NavBar, Footer, Banner, CardTable, Count, CenterBanner, MiniCardTable, Bottom },
+  components: {
+    NavBar,
+    Footer,
+    Banner,
+    CardTable,
+    Count,
+    CenterBanner,
+    MiniCardTable,
+    Bottom,
+    BannerBg,
+    LoginBox
+},
   methods: {},
 };
 </script>
