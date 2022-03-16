@@ -1,7 +1,7 @@
 <!-- s -->
 <template>
   <div class="product_box" @click="jump(product.href)">
-    <img :src="product.src" />
+    <img :src="product.src" class="img"/>
     <h4>{{ product.title }}</h4>
     <p>{{ product.content }}</p>
   </div>
@@ -50,6 +50,7 @@ export default {
   border-radius: 4px;
   overflow: hidden;
   cursor: pointer;
+  border: 1px solid rgba(195, 193, 193, 0.513);
 }
 .product_box h4 {
   font-size: 18px;
@@ -61,10 +62,11 @@ export default {
 }
 img {
   height: 68%;
-  border-radius: 4px;
+  /* border-radius: 4px; */
+  /* border: 1px solid rgb(153, 153, 153); */
   position: relative;
 }
-.product_box::after {
+/* .product_box::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -78,5 +80,5 @@ img {
 .product_box:hover::after {
   background-color: #6b6b6b00;
   transform: scaleX(1);
-}
+} */
 </style>
