@@ -1,7 +1,8 @@
 <template>
   <div id="root">
     <NavBar></NavBar>
- <Banner :message="tool_message"> </Banner>
+ <Banner :message="tool_message">
+   <img src="@/assets/img/banner/tool.png" alt="" slot="img" class="koutu"/> </Banner>
 
     <CenterBanner
       style="background-color: white"
@@ -61,5 +62,8 @@ export default {
 }
 #content {
   height: 200px;
+}
+.koutu{
+  width: 486px;
 }
 </style>
